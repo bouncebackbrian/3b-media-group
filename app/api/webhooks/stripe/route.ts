@@ -53,11 +53,12 @@ export async function POST(req: NextRequest) {
         break
       }
       case 'customer.subscription.deleted': {
+        // Match by stripe_subscription_id (sub_...), not stripe_session_id (cs_...)
         const sub = event.data.object as Stripe.Subscription
         await supabase
           .from('media_orders')
           .update({ fulfillment_status: 'cancelled', updated_at: new Date().toISOString() })
-          .eq('stripe_session_id', sub.id)
+          .eq('stripe_subscription_id', sub.id)
         break
       }
     }
@@ -95,13 +96,14 @@ async function handleCheckoutCompleted(
 
   if (!customer) return
 
-  // Create order
+  // Create order — store subscription id when present so cancellation webhook can match
   const { data: order } = await supabase
     .from('media_orders')
     .insert({
       customer_id: customer.id,
       stripe_session_id: session.id,
       stripe_payment_intent_id: session.payment_intent ?? null,
+      stripe_subscription_id: session.subscription ?? null,
       stripe_customer_id: session.customer ?? null,
       amount: session.amount_total ?? 0,
       currency: session.currency ?? 'usd',
