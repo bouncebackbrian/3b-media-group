@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 const nav = [
@@ -16,11 +17,15 @@ export default function Header() {
   return (
     <header className="border-b border-white/8 bg-[#0a0a0a] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2.5">
-          <div className="w-8 h-8 bg-[#F97316] rounded-lg flex items-center justify-center font-black text-sm text-white">
-            3B
-          </div>
-          <span className="font-bold text-white text-[15px]">3B Media Group</span>
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/3b-media-logo.png"
+            alt="3B Media Group"
+            width={48}
+            height={48}
+            className="w-12 h-12 object-contain"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const links = [
@@ -17,13 +18,10 @@ export default function AdminNav() {
 
   return (
     <aside className="w-56 shrink-0 border-r border-white/8 flex flex-col min-h-screen">
-      <div className="p-5 border-b border-white/8">
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-[#F97316] rounded-lg flex items-center justify-center font-black text-xs text-white">3B</div>
-          <div>
-            <p className="font-bold text-xs">3B Media</p>
-            <p className="text-[10px] text-white/30">Admin</p>
-          </div>
+      <div className="p-4 border-b border-white/8">
+        <div className="flex items-center gap-2.5">
+          <Image src="/3b-media-logo.png" alt="3B Media Group" width={36} height={36} className="w-9 h-9 object-contain" />
+          <p className="text-[10px] text-white/30 font-semibold uppercase tracking-wider">Admin</p>
         </div>
       </div>
 

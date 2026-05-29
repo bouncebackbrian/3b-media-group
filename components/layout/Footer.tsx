@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const services = [
   { label: 'Domain Setup', href: '/services/domain-setup' },
@@ -28,11 +29,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 bg-[#F97316] rounded-lg flex items-center justify-center font-black text-sm text-white">
-                3B
-              </div>
-              <span className="font-bold text-white text-[15px]">3B Media Group</span>
+            <div className="mb-4">
+              <Image
+                src="/3b-media-logo.png"
+                alt="3B Media Group"
+                width={56}
+                height={56}
+                className="w-14 h-14 object-contain"
+              />
             </div>
             <p className="text-sm text-white/40 leading-relaxed">
               Professional business presence services for entrepreneurs who are serious about growth.
