@@ -1,16 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --bg-base:        #081120;
-  --bg-surface:     #101B33;
-  --accent:         #9D7BFF;
-  --accent-cyan:    #00D4FF;
-  --success:        #00E676;
-  --text-primary:   #F5F7FA;
-  --text-muted:     rgba(245, 247, 250, 0.55);
-  --text-dim:       rgba(245, 247, 250, 0.28);
-  --border:         rgba(157, 123, 255, 0.2);
-  --border-subtle:  rgba(255, 255, 255, 0.06);
+  --bg-base:       #0a0a0a;
+  --bg-surface:    #111111;
+  --accent:        #F97316;
+  --accent-hover:  #ea6c0a;
+  --text-primary:  #ffffff;
+  --text-muted:    rgba(255, 255, 255, 0.55);
+  --text-dim:      rgba(255, 255, 255, 0.28);
+  --border:        rgba(255, 255, 255, 0.08);
 }
 
 *, *::before, *::after {
@@ -27,140 +25,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Aurora background */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 15% -5%,  rgba(157,123,255,0.18) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 50% at 90% 10%,  rgba(0,212,255,0.10)   0%, transparent 50%),
-    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(157,123,255,0.08) 0%, transparent 55%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Glass card */
-.glass-card {
-  background: rgba(16, 27, 51, 0.55);
-  border: 1px solid var(--border-subtle);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-radius: 16px;
-  padding: 32px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.glass-card:hover {
-  border-color: rgba(157, 123, 255, 0.3);
-  box-shadow: 0 0 30px rgba(157, 123, 255, 0.12);
-  transform: translateY(-3px);
-}
-
-.glass-card-lg {
-  background: rgba(16, 27, 51, 0.6);
-  border: 1px solid rgba(157, 123, 255, 0.18);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: 24px;
-  padding: 48px;
-  box-shadow: 0 0 60px rgba(157,123,255,0.08), inset 0 1px 0 rgba(255,255,255,0.04);
-}
-
-/* Nav glass */
-.nav-glass {
-  background: rgba(8, 17, 32, 0.8);
-  border-bottom: 1px solid var(--border-subtle);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-}
-
-/* Gradient text */
-.gradient-text-media {
-  background: linear-gradient(135deg, #9D7BFF 0%, #00D4FF 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Icon badge */
-.icon-badge {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  background: rgba(157, 123, 255, 0.12);
-  border: 1px solid rgba(157, 123, 255, 0.25);
-  box-shadow: 0 0 14px rgba(157, 123, 255, 0.12);
-  margin-bottom: 20px;
-  flex-shrink: 0;
-}
-
-/* Stat card */
-.stat-card {
-  text-align: center;
-}
-
-.stat-val {
-  font-size: 28px;
-  font-weight: 900;
-  background: linear-gradient(135deg, #9D7BFF, #00D4FF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* CTA button */
-.btn-primary {
-  background: linear-gradient(135deg, #9D7BFF 0%, #7B5CE0 100%);
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 0 24px rgba(157, 123, 255, 0.4);
-  transition: box-shadow 0.2s ease, transform 0.15s ease;
-}
-
-.btn-primary:hover {
-  box-shadow: 0 0 36px rgba(157, 123, 255, 0.6);
-  transform: translateY(-1px);
-}
-
-.btn-outline {
-  border: 1px solid rgba(157, 123, 255, 0.35);
-  color: #9D7BFF;
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 15px;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(157, 123, 255, 0.05);
-  transition: background 0.15s ease, border-color 0.15s ease;
-}
-
-.btn-outline:hover {
-  background: rgba(157, 123, 255, 0.12);
-  border-color: rgba(157, 123, 255, 0.5);
-}
-
-/* Section base */
 section {
   position: relative;
   z-index: 1;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
 }
