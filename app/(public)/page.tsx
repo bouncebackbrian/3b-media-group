@@ -2,259 +2,174 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: '3B Media Group — Professional Business Presence for Entrepreneurs',
-  description: 'Domain setup, logo design, website builds, and credibility packages. Built for entrepreneurs who need to look like they mean business.',
+  title: '3B Media Group — Digital Growth Agency for Entrepreneurs',
+  description: 'Marketing, websites, AI solutions, branding, and business growth for entrepreneurs, realtors, and trucking companies. Launch, grow, automate, and scale.',
 }
 
 const services = [
-  { title: 'Domain Setup', desc: 'The right domain found, purchased, and configured. Professional email included.', href: '/services/domain-setup', icon: '⬡' },
-  { title: 'Logo Design', desc: 'A mark that holds up everywhere — digital, print, proposal, and pitch.', href: '/services/logo-design', icon: '◈' },
-  { title: 'Website Build', desc: 'Mobile-first, fast, and built to convert. Not a template — a real business site.', href: '/services/websites', icon: '▣' },
-  { title: 'Credibility Builder', desc: 'Full stack: domain, logo, site, Google Business, and LinkedIn — done together.', href: '/services/credibility', icon: '◆' },
-  { title: 'Funding Readiness', desc: 'Your online presence configured to support the conversation, not work against it.', href: '/services/funding-readiness', icon: '◉' },
+  { title: 'Marketing', desc: 'Social media, advertising, and lead generation that fills your pipeline.', href: '/services/marketing', icon: '◎' },
+  { title: 'Websites', desc: 'Business, realtor, and e-commerce sites built to convert — not templates.', href: '/services/websites', icon: '▣' },
+  { title: 'AI Solutions', desc: 'Custom GPTs, automation, and assistants that save time and scale you.', href: '/services/ai-solutions', icon: '◈' },
+  { title: 'Creative Services', desc: 'Logos, branding, reels, and video that make you look the part.', href: '/services/creative', icon: '◆' },
+  { title: 'Business Growth', desc: 'Strategy, consulting, and ecosystem access — funding, credit, fleet.', href: '/services/business-growth', icon: '◉' },
 ]
 
-const steps = [
-  { n: '01', title: 'Choose your package or book a call.', body: 'Start with a fixed package if you know what you need. Talk to us first if you want a recommendation.' },
-  { n: '02', title: 'Complete your intake.', body: 'Tell us about your business. We ask the right questions so we build the right thing — no guesswork.' },
-  { n: '03', title: 'We build. You review. We launch.', body: 'Revisions are included. You stay informed. We do not disappear mid-project.' },
+const pricing = [
+  { name: 'Starter', price: '$99', period: '/mo', desc: '4 posts, AI graphics, captions.', featured: false },
+  { name: 'Growth', price: '$199', period: '/mo', desc: '8 posts, 2 reels, content calendar.', featured: true },
+  { name: 'Business Pro', price: '$349', period: '/mo', desc: '12 posts, 4 reels, marketing support.', featured: false },
 ]
 
-const industries = [
-  'Trucking & Logistics', 'Real Estate', 'Consulting', 'Service Contractors',
-  'Online Sellers', 'Healthcare & Wellness', 'Startups', 'Creators & Coaches',
+const testimonials = [
+  { quote: '3B Media Group built my entire online presence and kept my listings in front of buyers every week. It changed how my business looks.', name: 'Madalyn', title: 'Real Estate Professional' },
+  { quote: 'They handle the marketing so I can focus on the road. Consistent, professional, and they actually pick up the phone.', name: 'Owner-Operator', title: 'Trucking & Logistics' },
 ]
 
-const packages = [
-  {
-    name: 'Brand Starter',
-    price: '$499',
-    desc: 'Logo design with full file delivery and brand color palette.',
-    bullets: ['2–3 initial concepts', '2 revision rounds', 'SVG, PNG, PDF files', 'Full rights transfer'],
-    slug: 'brand-starter',
-    featured: false,
-  },
-  {
-    name: 'Website Launch',
-    price: '$1,800',
-    desc: 'A professional 5-page site built to convert and built to last.',
-    bullets: ['Up to 5 pages', 'Mobile-first design', 'Contact forms + SEO setup', '30-day post-launch support'],
-    slug: 'website-launch',
-    featured: true,
-  },
-  {
-    name: 'Credibility Builder',
-    price: '$2,500',
-    desc: 'The full stack — domain, logo, website, and business profiles.',
-    bullets: ['Everything in Website Launch', 'Logo design included', 'Domain + email setup', 'Google Business + LinkedIn'],
-    slug: 'credibility-builder',
-    featured: false,
-  },
+const faqs = [
+  { q: 'What does 3B Media Group do?', a: 'We are a digital growth agency. We help businesses launch, grow, automate, and scale through marketing, websites, AI, branding, and business growth services — all in one place.' },
+  { q: 'How much does it cost?', a: 'Marketing plans start at $99/month, websites start at $299, and one-time services start at $25. Use the Business Growth Wizard for a personalized recommendation.' },
+  { q: 'How do I get started?', a: 'Take the free Business Growth Wizard for a personalized plan and 3Boost score, request a quote, or book a call. We respond within one business day.' },
+  { q: 'What industries do you work with?', a: 'Entrepreneurs, realtors, trucking companies, service businesses, and small businesses across many industries.' },
+  { q: 'Is this part of a larger ecosystem?', a: 'Yes. 3B Media Group is the digital growth division of the 3B Ecosystem, which also includes funding, credit, fleet, and business identity products.' },
 ]
 
 export default function HomePage() {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
+    <div className="bg-[#0A1A2F] text-white min-h-screen">
 
       {/* HERO */}
       <section className="px-6 py-28 md:py-36 border-b border-white/8">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-5">
-            3B Media Group
-          </p>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-5">3B Media Group</p>
           <h1 className="text-4xl md:text-6xl font-black leading-[1.08] mb-6 tracking-tight">
-            Your Business Needs to Look<br />
-            <span className="text-[#F97316]">Like It Belongs.</span>
+            Launch. Grow. Automate.<br />
+            <span className="text-[#14B8A6]">Scale.</span>
           </h1>
           <p className="text-lg text-white/55 max-w-2xl mx-auto leading-relaxed mb-10">
-            We build the professional foundation that makes your business credible — domain, logo, website, and positioning — so you show up ready for customers, vendors, and lenders.
+            The digital growth agency for entrepreneurs, realtors, and trucking companies. Marketing, websites, AI, branding, and business growth — everything you need to grow, in one place.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link
-              href="/start-project"
-              className="bg-[#F97316] hover:bg-[#ea6c0a] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors"
-            >
-              Start Your Project →
+            <Link href="/grow" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors">
+              Get Started →
             </Link>
-            <Link
-              href="/book"
-              className="border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-semibold px-7 py-3.5 rounded-xl text-[15px] transition-colors"
-            >
-              Book a Free Call
+            <Link href="/contact" className="border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-semibold px-7 py-3.5 rounded-xl text-[15px] transition-colors">
+              Request a Quote
             </Link>
           </div>
         </div>
       </section>
 
-      {/* PROBLEM */}
-      <section className="px-6 py-24 border-b border-white/8">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-black mb-12 max-w-2xl">
-            Most entrepreneurs lose deals before the first conversation.
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="w-10 h-0.5 bg-[#F97316] mb-5" />
-              <p className="text-white/55 text-sm leading-relaxed">
-                When someone searches your business and finds nothing — or finds something that looks amateur — the answer is already no.
-              </p>
-            </div>
-            <div>
-              <div className="w-10 h-0.5 bg-[#F97316] mb-5" />
-              <p className="text-white/55 text-sm leading-relaxed">
-                A bad domain, no logo, or a half-built site signals you are not ready. That costs you customers, vendor relationships, and funding conversations.
-              </p>
-            </div>
-            <div>
-              <div className="w-10 h-0.5 bg-[#F97316] mb-5" />
-              <p className="text-white/55 text-sm leading-relaxed">
-                You do not need a huge budget. You need the right infrastructure, built correctly, by people who understand what professionalism signals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
+      {/* SERVICES OVERVIEW */}
       <section className="px-6 py-24 border-b border-white/8">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-3">What We Do</p>
-            <h2 className="text-3xl md:text-4xl font-black">We build the infrastructure your business runs on.</h2>
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-3">What We Do</p>
+            <h2 className="text-3xl md:text-4xl font-black">Five divisions. One growth partner.</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((s) => (
-              <Link
-                key={s.href}
-                href={s.href}
-                className="bg-[#111] border border-white/8 hover:border-[#F97316]/40 rounded-2xl p-7 group transition-colors"
-              >
-                <div className="text-[#F97316] text-2xl mb-4 font-mono">{s.icon}</div>
-                <h3 className="font-bold text-[15px] mb-2 group-hover:text-[#F97316] transition-colors">{s.title}</h3>
+              <Link key={s.href} href={s.href} className="bg-[#11243D] border border-white/8 hover:border-[#14B8A6]/40 rounded-2xl p-7 group transition-colors">
+                <div className="text-[#14B8A6] text-2xl mb-4 font-mono">{s.icon}</div>
+                <h3 className="font-bold text-[15px] mb-2 group-hover:text-[#14B8A6] transition-colors">{s.title}</h3>
                 <p className="text-sm text-white/45 leading-relaxed">{s.desc}</p>
               </Link>
             ))}
-            <Link
-              href="/services"
-              className="bg-transparent border border-white/8 hover:border-white/20 rounded-2xl p-7 flex items-center justify-center group transition-colors"
-            >
+            <Link href="/services" className="bg-transparent border border-white/8 hover:border-white/20 rounded-2xl p-7 flex items-center justify-center group transition-colors">
               <span className="text-sm text-white/40 group-hover:text-white transition-colors">See all services →</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* PACKAGES PREVIEW */}
+      {/* GROWTH WIZARD + 3BOOST BAND */}
+      <section className="px-6 py-20 border-b border-white/8 bg-[#081320]">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-4">Free Tool</p>
+          <h2 className="text-3xl md:text-4xl font-black mb-4">Get your 3Boost Growth Score.</h2>
+          <p className="text-white/55 leading-relaxed max-w-2xl mx-auto mb-8">
+            The Business Growth Wizard is your 24/7 consultant. Answer a few questions, get a 0–100 growth score across six categories, and a personalized plan — the exact services and tools that fit your business right now.
+          </p>
+          <Link href="/grow" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors">
+            Get My 3Boost Score →
+          </Link>
+        </div>
+      </section>
+
+      {/* PRICING */}
       <section className="px-6 py-24 border-b border-white/8">
         <div className="max-w-6xl mx-auto">
           <div className="mb-12">
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-3">Pricing</p>
-            <h2 className="text-3xl md:text-4xl font-black">Choose your starting point.</h2>
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-3">Pricing</p>
+            <h2 className="text-3xl md:text-4xl font-black">Plans that scale with you.</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
-            {packages.map((pkg) => (
-              <div
-                key={pkg.slug}
-                className={`rounded-2xl p-7 flex flex-col ${
-                  pkg.featured
-                    ? 'bg-[#F97316]/10 border border-[#F97316]/40'
-                    : 'bg-[#111] border border-white/8'
-                }`}
-              >
-                {pkg.featured && (
-                  <span className="text-[10px] font-bold tracking-widest uppercase text-[#F97316] mb-4">Most Popular</span>
-                )}
-                <h3 className="font-black text-lg mb-1">{pkg.name}</h3>
-                <p className="text-3xl font-black text-[#F97316] mb-3">{pkg.price}</p>
-                <p className="text-sm text-white/50 mb-5 leading-relaxed">{pkg.desc}</p>
-                <ul className="space-y-2 mb-7 flex-1">
-                  {pkg.bullets.map((b) => (
-                    <li key={b} className="flex gap-2 text-sm text-white/65">
-                      <span className="text-[#F97316] mt-0.5 shrink-0">✓</span>
-                      {b}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={`/checkout/${pkg.slug}`}
-                  className={`text-center py-3 rounded-xl text-sm font-bold transition-colors ${
-                    pkg.featured
-                      ? 'bg-[#F97316] hover:bg-[#ea6c0a] text-white'
-                      : 'border border-white/15 hover:border-white/30 text-white'
-                  }`}
-                >
-                  Get Started
+            {pricing.map((p) => (
+              <div key={p.name} className={`rounded-2xl p-7 flex flex-col ${p.featured ? 'bg-[#14B8A6]/10 border border-[#14B8A6]/40' : 'bg-[#11243D] border border-white/8'}`}>
+                {p.featured && <span className="text-[10px] font-bold tracking-widest uppercase text-[#14B8A6] mb-4">Most Popular</span>}
+                <h3 className="font-black text-lg mb-1">{p.name}</h3>
+                <p className="mb-3"><span className="text-3xl font-black text-[#14B8A6]">{p.price}</span><span className="text-white/40 text-sm">{p.period}</span></p>
+                <p className="text-sm text-white/50 mb-6 leading-relaxed flex-1">{p.desc}</p>
+                <Link href="/pricing" className={`text-center py-3 rounded-xl text-sm font-bold transition-colors ${p.featured ? 'bg-[#14B8A6] hover:bg-[#0D9488] text-white' : 'border border-white/15 hover:border-white/30 text-white'}`}>
+                  View Plans
                 </Link>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link href="/packages" className="text-sm text-white/40 hover:text-white transition-colors">
-              See all packages including Done-For-You Launch →
-            </Link>
+            <Link href="/pricing" className="text-sm text-white/40 hover:text-white transition-colors">See full pricing including websites and one-time services →</Link>
           </div>
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
+      {/* PORTFOLIO HIGHLIGHT */}
+      <section className="px-6 py-24 border-b border-white/8 bg-[#081320]">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-5">Portfolio</p>
+          <h2 className="text-3xl md:text-4xl font-black mb-6">Real results for real businesses.</h2>
+          <p className="text-white/55 leading-relaxed mb-8 max-w-2xl">
+            From realtors to trucking companies, we build the professional foundation our clients grow on — and keep them visible with consistent marketing.
+          </p>
+          <Link href="/portfolio" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
+            See the Portfolio →
+          </Link>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
       <section className="px-6 py-24 border-b border-white/8">
         <div className="max-w-5xl mx-auto">
-          <div className="mb-12">
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-3">Process</p>
-            <h2 className="text-3xl md:text-4xl font-black">From start to live in three steps.</h2>
+          <div className="mb-12 text-center">
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-3">Testimonials</p>
+            <h2 className="text-3xl md:text-4xl font-black">Trusted by founders who mean business.</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((s) => (
-              <div key={s.n}>
-                <div className="text-4xl font-black text-white/10 mb-4 font-mono">{s.n}</div>
-                <h3 className="font-bold text-[15px] mb-3">{s.title}</h3>
-                <p className="text-sm text-white/45 leading-relaxed">{s.body}</p>
+          <div className="grid md:grid-cols-2 gap-5">
+            {testimonials.map((t) => (
+              <div key={t.name} className="bg-[#11243D] border border-white/8 rounded-2xl p-8">
+                <p className="text-white/70 leading-relaxed mb-5">&ldquo;{t.quote}&rdquo;</p>
+                <p className="text-sm font-bold">{t.name}</p>
+                <p className="text-xs text-white/40">{t.title}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FUNDING READINESS */}
-      <section className="px-6 py-24 border-b border-white/8 bg-[#0f0f0f]">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-5">Funding Readiness</p>
-          <h2 className="text-3xl md:text-4xl font-black mb-6">
-            We help businesses look ready.<br />The rest is up to the conversation.
-          </h2>
-          <p className="text-white/55 leading-relaxed mb-6 max-w-2xl">
-            Many of our clients are preparing for growth — approaching lenders, applying for vendor accounts, or building toward a funding conversation. A professional, complete online presence is part of that picture.
-          </p>
-          <p className="text-white/40 text-sm leading-relaxed mb-8 max-w-2xl">
-            We are not in the business of making promises about outcomes we cannot control. What we build is the infrastructure side of credibility — because it matters, and because too many capable founders show up without it.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/services/funding-readiness" className="bg-[#F97316] hover:bg-[#ea6c0a] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
-              See Funding-Readiness Package
-            </Link>
-            <Link href="/disclaimer" className="border border-white/15 text-white/50 hover:text-white px-6 py-3 rounded-xl text-sm transition-colors">
-              Read Our Disclaimer
-            </Link>
-          </div>
-          <p className="text-white/25 text-xs mt-6 max-w-xl leading-relaxed">
-            3B Media Group does not guarantee funding approvals, loan outcomes, or lender decisions. Services are designed to support professional business presentation only.
-          </p>
-        </div>
-      </section>
-
-      {/* INDUSTRIES */}
+      {/* FAQ */}
       <section className="px-6 py-24 border-b border-white/8">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-5">Who We Work With</p>
-          <h2 className="text-2xl md:text-3xl font-black mb-10">Built for founders across industries.</h2>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {industries.map((ind) => (
-              <span
-                key={ind}
-                className="border border-white/10 text-white/50 text-sm px-4 py-2 rounded-full"
-              >
-                {ind}
-              </span>
+        <div className="max-w-3xl mx-auto">
+          <div className="mb-12 text-center">
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-3">FAQ</p>
+            <h2 className="text-3xl md:text-4xl font-black">Questions, answered.</h2>
+          </div>
+          <div className="space-y-3">
+            {faqs.map((f) => (
+              <details key={f.q} className="bg-[#11243D] border border-white/8 rounded-2xl p-6 group">
+                <summary className="font-bold text-[15px] cursor-pointer list-none flex justify-between items-center">
+                  {f.q}
+                  <span className="text-[#14B8A6] group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                </summary>
+                <p className="text-sm text-white/50 leading-relaxed mt-4">{f.a}</p>
+              </details>
             ))}
           </div>
         </div>
@@ -263,24 +178,14 @@ export default function HomePage() {
       {/* FINAL CTA */}
       <section className="px-6 py-28">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-black mb-5">
-            Ready to look like the business you are building?
-          </h2>
-          <p className="text-white/50 mb-8 leading-relaxed">
-            Start with a package or talk to us first. Either way, we move fast.
-          </p>
+          <h2 className="text-3xl md:text-4xl font-black mb-5">Ready to grow your business?</h2>
+          <p className="text-white/50 mb-8 leading-relaxed">Get a personalized plan in two minutes, or request a quote. Either way, we move fast.</p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <Link
-              href="/start-project"
-              className="bg-[#F97316] hover:bg-[#ea6c0a] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors"
-            >
-              Start Your Project →
+            <Link href="/grow" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors">
+              Get Started →
             </Link>
-            <Link
-              href="/book"
-              className="border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-semibold px-7 py-3.5 rounded-xl text-[15px] transition-colors"
-            >
-              Book a Free Call
+            <Link href="/contact" className="border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-semibold px-7 py-3.5 rounded-xl text-[15px] transition-colors">
+              Request a Quote
             </Link>
           </div>
         </div>

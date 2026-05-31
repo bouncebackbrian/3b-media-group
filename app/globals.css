@@ -1,12 +1,19 @@
 @import "tailwindcss";
 
+/*
+ * 3B Media Group — design system
+ * Palette: Navy / Teal / White / Silver.
+ * Pages use the hex values below directly (e.g. bg-[#0A1A2F]) so these
+ * variables document the canonical tokens. Update both if the palette changes.
+ */
 :root {
-  --bg-base:       #0a0a0a;
-  --bg-surface:    #111111;
-  --accent:        #F97316;
-  --accent-hover:  #ea6c0a;
-  --text-primary:  #ffffff;
-  --text-muted:    rgba(255, 255, 255, 0.55);
+  --bg-base:       #0A1A2F; /* deep navy — page background */
+  --bg-deep:       #081320; /* darker navy — alternating sections */
+  --bg-surface:    #11243D; /* navy surface — cards, panels */
+  --accent:        #14B8A6; /* teal — primary accent */
+  --accent-hover:  #0D9488; /* teal (darker) — hover */
+  --text-primary:  #ffffff; /* white */
+  --text-muted:    rgba(255, 255, 255, 0.55); /* silver */
   --text-dim:      rgba(255, 255, 255, 0.28);
   --border:        rgba(255, 255, 255, 0.08);
 }

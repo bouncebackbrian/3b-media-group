@@ -12,8 +12,8 @@ export default async function DomainsPage() {
     submitted: 'bg-blue-500/15 text-blue-400',
     availability_checked: 'bg-yellow-500/15 text-yellow-400',
     acquired: 'bg-purple-500/15 text-purple-400',
-    dns_configured: 'bg-[#F97316]/15 text-[#F97316]',
-    email_setup: 'bg-[#F97316]/15 text-[#F97316]',
+    dns_configured: 'bg-[#14B8A6]/15 text-[#14B8A6]',
+    email_setup: 'bg-[#14B8A6]/15 text-[#14B8A6]',
     transferred: 'bg-green-500/15 text-green-400',
     complete: 'bg-green-500/15 text-green-400',
   }
@@ -25,7 +25,7 @@ export default async function DomainsPage() {
         <p className="text-white/35 text-sm mt-1">{domains?.length ?? 0} total · Manual fulfillment (Phase A)</p>
       </div>
 
-      <div className="bg-[#111] border border-white/8 rounded-2xl overflow-hidden">
+      <div className="bg-[#11243D] border border-white/8 rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -46,7 +46,7 @@ export default async function DomainsPage() {
                 return (
                   <tr key={d.id} className="hover:bg-white/3 transition-colors">
                     <td className="px-5 py-4">
-                      <Link href={`/admin/domains/${d.id}`} className="font-semibold hover:text-[#F97316] transition-colors">{c?.full_name ?? '—'}</Link>
+                      <Link href={`/admin/domains/${d.id}`} className="font-semibold hover:text-[#14B8A6] transition-colors">{c?.full_name ?? '—'}</Link>
                       <p className="text-white/30 text-xs">{c?.email}</p>
                     </td>
                     <td className="px-5 py-4 text-white/50 text-xs">{d.preferred_domains?.join(', ') ?? '—'}</td>

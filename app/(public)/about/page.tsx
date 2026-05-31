@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
+    <div className="bg-[#0A1A2F] text-white min-h-screen">
       <section className="px-6 py-20 border-b border-white/8">
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-4">About</p>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-4">About</p>
           <h1 className="text-4xl md:text-5xl font-black mb-6">We build the infrastructure entrepreneurs run on.</h1>
           <p className="text-white/55 leading-relaxed text-lg">
             3B Media Group is a done-for-you business presence service built for founders who are serious about growth. We handle domain setup, logo design, website builds, and credibility-focused launch assets — so you can show up ready.
@@ -40,8 +40,8 @@ export default function AboutPage() {
               { title: 'Built for speed', body: 'We know founders do not have six months to wait for a website. Our packages are scoped for fast execution. Most projects are in production within 2–3 weeks of intake completion.' },
               { title: 'No fabricated proof', body: 'We will not show you made-up testimonials, fake client counts, or invented statistics. As our portfolio grows, we document real work. Until then, the work speaks for itself.' },
             ].map((item) => (
-              <div key={item.title} className="bg-[#111] border border-white/8 rounded-2xl p-6">
-                <div className="w-8 h-0.5 bg-[#F97316] mb-3" />
+              <div key={item.title} className="bg-[#11243D] border border-white/8 rounded-2xl p-6">
+                <div className="w-8 h-0.5 bg-[#14B8A6] mb-3" />
                 <h3 className="font-bold mb-2">{item.title}</h3>
                 <p className="text-white/45 text-sm leading-relaxed">{item.body}</p>
               </div>
@@ -67,7 +67,7 @@ export default function AboutPage() {
       <section className="px-6 py-20 text-center">
         <h2 className="text-2xl font-black mb-4">Ready to build?</h2>
         <div className="flex flex-wrap gap-3 justify-center">
-          <Link href="/start-project" className="bg-[#F97316] hover:bg-[#ea6c0a] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
+          <Link href="/start-project" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
             Start Your Project
           </Link>
           <Link href="/packages" className="border border-white/15 hover:border-white/30 text-white px-6 py-3 rounded-xl text-sm transition-colors">

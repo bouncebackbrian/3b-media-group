@@ -15,7 +15,7 @@ export default async function CustomersPage() {
         <p className="text-white/35 text-sm mt-1">{customers?.length ?? 0} total</p>
       </div>
 
-      <div className="bg-[#111] border border-white/8 rounded-2xl overflow-hidden">
+      <div className="bg-[#11243D] border border-white/8 rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -39,14 +39,14 @@ export default async function CustomersPage() {
                 return (
                   <tr key={c.id} className="hover:bg-white/3 transition-colors">
                     <td className="px-5 py-4">
-                      <Link href={`/admin/customers/${c.id}`} className="font-semibold hover:text-[#F97316] transition-colors">
+                      <Link href={`/admin/customers/${c.id}`} className="font-semibold hover:text-[#14B8A6] transition-colors">
                         {c.full_name ?? '—'}
                       </Link>
                     </td>
                     <td className="px-5 py-4 text-white/50">{c.email}</td>
                     <td className="px-5 py-4 text-white/40 hidden md:table-cell">{c.company_name ?? '—'}</td>
                     <td className="px-5 py-4 text-white/60">{orders.length}</td>
-                    <td className="px-5 py-4 font-bold text-[#F97316] hidden lg:table-cell">
+                    <td className="px-5 py-4 font-bold text-[#14B8A6] hidden lg:table-cell">
                       {ltv > 0 ? `$${(ltv / 100).toLocaleString()}` : '—'}
                     </td>
                     <td className="px-5 py-4 text-white/25 text-xs hidden lg:table-cell">

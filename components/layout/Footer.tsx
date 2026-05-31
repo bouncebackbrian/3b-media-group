@@ -2,19 +2,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const services = [
-  { label: 'Domain Setup', href: '/services/domain-setup' },
-  { label: 'Logo Design', href: '/services/logo-design' },
-  { label: 'Website Build', href: '/services/websites' },
-  { label: 'Credibility Builder', href: '/services/credibility' },
-  { label: 'Funding Readiness', href: '/services/funding-readiness' },
+  { label: 'Marketing', href: '/services/marketing' },
+  { label: 'Websites', href: '/services/websites' },
+  { label: 'AI Solutions', href: '/services/ai-solutions' },
+  { label: 'Creative Services', href: '/services/creative' },
+  { label: 'Business Growth', href: '/services/business-growth' },
 ]
 
 const company = [
+  { label: 'Business Growth Wizard', href: '/grow' },
+  { label: 'Marketplace', href: '/marketplace' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'About', href: '/about' },
-  { label: 'Packages', href: '/packages' },
-  { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Book a Call', href: '/book' },
 ]
 
 const legal = [
@@ -25,7 +26,7 @@ const legal = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/8 bg-[#0a0a0a] mt-auto">
+    <footer className="border-t border-white/8 bg-[#0A1A2F] mt-auto">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
@@ -43,7 +44,7 @@ export default function Footer() {
             </p>
             <p className="text-xs text-white/25 mt-4">
               Part of the{' '}
-              <a href="https://bouncebackbrian.com" className="text-[#F97316] hover:underline">
+              <a href="https://bouncebackbrian.com" className="text-[#14B8A6] hover:underline">
                 3B Ecosystem
               </a>
             </p>

@@ -96,11 +96,34 @@ async function handleCheckoutCompleted(
 
   if (!customer) return
 
+  // Resolve package_id from metadata slug so the listing access check can join on it
+  let packageId: string | null = null
+  const packageSlug = session.metadata?.package_slug
+  if (packageSlug) {
+    const { data: pkg } = await supabase
+      .from('media_service_packages')
+      .select('id')
+      .eq('slug', packageSlug)
+      .single()
+    packageId = pkg?.id ?? null
+  }
+
+  // Resolve client_id — media_clients shares email with auth users
+  let clientId: string | null = null
+  const { data: client } = await supabase
+    .from('media_clients')
+    .select('id')
+    .eq('email', email)
+    .single()
+  clientId = client?.id ?? null
+
   // Create order — store subscription id when present so cancellation webhook can match
   const { data: order } = await supabase
     .from('media_orders')
     .insert({
       customer_id: customer.id,
+      client_id: clientId,
+      package_id: packageId,
       stripe_session_id: session.id,
       stripe_payment_intent_id: session.payment_intent ?? null,
       stripe_subscription_id: session.subscription ?? null,
@@ -123,6 +146,7 @@ async function handleCheckoutCompleted(
     action: 'order_created',
     actor: 'webhook',
     details: {
+      package_slug: packageSlug,
       package_name: session.metadata?.package_name,
       amount: session.amount_total,
       email,

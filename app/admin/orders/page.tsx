@@ -19,7 +19,7 @@ export default async function OrdersPage() {
     pending: 'bg-white/8 text-white/40',
     intake_sent: 'bg-blue-500/15 text-blue-400',
     intake_received: 'bg-purple-500/15 text-purple-400',
-    in_progress: 'bg-[#F97316]/15 text-[#F97316]',
+    in_progress: 'bg-[#14B8A6]/15 text-[#14B8A6]',
     delivered: 'bg-green-500/15 text-green-400',
     cancelled: 'bg-white/8 text-white/30',
   }
@@ -31,7 +31,7 @@ export default async function OrdersPage() {
         <p className="text-white/35 text-sm mt-1">{orders?.length ?? 0} total</p>
       </div>
 
-      <div className="bg-[#111] border border-white/8 rounded-2xl overflow-hidden">
+      <div className="bg-[#11243D] border border-white/8 rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -54,13 +54,13 @@ export default async function OrdersPage() {
                 return (
                   <tr key={order.id} className="hover:bg-white/3 transition-colors">
                     <td className="px-5 py-4">
-                      <Link href={`/admin/orders/${order.id}`} className="font-semibold hover:text-[#F97316] transition-colors block">
+                      <Link href={`/admin/orders/${order.id}`} className="font-semibold hover:text-[#14B8A6] transition-colors block">
                         {customer?.full_name ?? '—'}
                       </Link>
                       <span className="text-white/35 text-xs">{customer?.email}</span>
                     </td>
                     <td className="px-5 py-4 text-white/50 hidden md:table-cell">{pkg?.name ?? '—'}</td>
-                    <td className="px-5 py-4 font-bold text-[#F97316]">${((order.amount ?? 0) / 100).toLocaleString()}</td>
+                    <td className="px-5 py-4 font-bold text-[#14B8A6]">${((order.amount ?? 0) / 100).toLocaleString()}</td>
                     <td className="px-5 py-4">
                       <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-full ${paymentColor[order.payment_status] ?? 'bg-white/8 text-white/40'}`}>
                         {order.payment_status}

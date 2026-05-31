@@ -6,16 +6,17 @@ import { useState } from 'react'
 
 const nav = [
   { label: 'Services', href: '/services' },
-  { label: 'Packages', href: '/packages' },
+  { label: 'Marketplace', href: '/marketplace' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'About', href: '/about' },
-  { label: 'FAQ', href: '/faq' },
 ]
 
 export default function Header() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="border-b border-white/8 bg-[#0a0a0a] sticky top-0 z-50">
+    <header className="border-b border-white/8 bg-[#0A1A2F] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
@@ -42,16 +43,16 @@ export default function Header() {
 
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href="/book"
+            href="/portal"
             className="text-sm text-white/60 hover:text-white transition-colors"
           >
-            Book a Call
+            Client Portal
           </Link>
           <Link
-            href="/start-project"
-            className="bg-[#F97316] hover:bg-[#ea6c0a] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
+            href="/grow"
+            className="bg-[#14B8A6] hover:bg-[#0D9488] text-white text-sm font-semibold px-4 py-2 rounded-lg transition-colors"
           >
-            Start Project
+            Grow My Business
           </Link>
         </div>
 
@@ -71,7 +72,7 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-white/8 bg-[#0a0a0a] px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t border-white/8 bg-[#0A1A2F] px-6 py-4 flex flex-col gap-4">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -83,18 +84,18 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="/book"
+            href="/portal"
             className="text-sm text-white/60 hover:text-white transition-colors"
             onClick={() => setOpen(false)}
           >
-            Book a Call
+            Client Portal
           </Link>
           <Link
-            href="/start-project"
-            className="bg-[#F97316] text-white text-sm font-semibold px-4 py-2.5 rounded-lg text-center"
+            href="/grow"
+            className="bg-[#14B8A6] text-white text-sm font-semibold px-4 py-2.5 rounded-lg text-center"
             onClick={() => setOpen(false)}
           >
-            Start Project
+            Grow My Business
           </Link>
         </div>
       )}

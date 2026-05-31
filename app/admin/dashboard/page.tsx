@@ -32,7 +32,7 @@ async function getRecentLeads() {
 
 function StatCard({ label, value, sub, href }: { label: string; value: string | number; sub?: string; href: string }) {
   return (
-    <Link href={href} className="bg-[#111] border border-white/8 hover:border-white/15 rounded-2xl p-5 transition-colors block">
+    <Link href={href} className="bg-[#11243D] border border-white/8 hover:border-white/15 rounded-2xl p-5 transition-colors block">
       <p className="text-xs text-white/35 uppercase tracking-wider mb-2">{label}</p>
       <p className="text-3xl font-black">{value}</p>
       {sub && <p className="text-xs text-white/30 mt-1">{sub}</p>}
@@ -48,7 +48,7 @@ function StatusBadge({ status }: { status: string }) {
     converted: 'bg-green-500/15 text-green-400',
     paid: 'bg-green-500/15 text-green-400',
     pending: 'bg-white/8 text-white/40',
-    in_progress: 'bg-[#F97316]/15 text-[#F97316]',
+    in_progress: 'bg-[#14B8A6]/15 text-[#14B8A6]',
   }
   return (
     <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full ${map[status] ?? 'bg-white/8 text-white/40'}`}>
@@ -74,10 +74,10 @@ export default async function AdminDashboardPage() {
         <StatCard label="Pending Domains" value={stats.pendingDomains} href="/admin/domains" />
       </div>
 
-      <div className="bg-[#111] border border-white/8 rounded-2xl">
+      <div className="bg-[#11243D] border border-white/8 rounded-2xl">
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/8">
           <h2 className="font-bold text-sm">Recent Leads</h2>
-          <Link href="/admin/leads" className="text-xs text-[#F97316] hover:underline">View all →</Link>
+          <Link href="/admin/leads" className="text-xs text-[#14B8A6] hover:underline">View all →</Link>
         </div>
         <div className="divide-y divide-white/5">
           {leads.length === 0 && (

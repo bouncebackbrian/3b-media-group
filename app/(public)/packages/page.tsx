@@ -90,10 +90,10 @@ const addons = [
 
 export default function PackagesPage() {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
+    <div className="bg-[#0A1A2F] text-white min-h-screen">
       <section className="px-6 py-20 border-b border-white/8">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-4">Packages & Pricing</p>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-4">Packages & Pricing</p>
           <h1 className="text-4xl md:text-5xl font-black mb-5">Clear scope. Fixed prices. No surprises.</h1>
           <p className="text-white/50 leading-relaxed">
             Every package has defined deliverables and a clear price. If your situation is more complex, we offer custom quotes. Start with a package or book a call if you are unsure.
@@ -108,26 +108,26 @@ export default function PackagesPage() {
               key={pkg.slug}
               className={`rounded-2xl p-7 flex flex-col ${
                 pkg.featured
-                  ? 'bg-[#F97316]/10 border border-[#F97316]/40'
-                  : 'bg-[#111] border border-white/8'
+                  ? 'bg-[#14B8A6]/10 border border-[#14B8A6]/40'
+                  : 'bg-[#11243D] border border-white/8'
               }`}
             >
               <div className="flex items-start justify-between mb-4">
                 <span className={`text-[10px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full ${
                   pkg.type === 'Deposit Model'
                     ? 'bg-white/8 text-white/50'
-                    : 'bg-[#F97316]/15 text-[#F97316]'
+                    : 'bg-[#14B8A6]/15 text-[#14B8A6]'
                 }`}>
                   {pkg.type}
                 </span>
                 {pkg.featured && (
-                  <span className="text-[10px] font-bold tracking-widest uppercase text-[#F97316]">Popular</span>
+                  <span className="text-[10px] font-bold tracking-widest uppercase text-[#14B8A6]">Popular</span>
                 )}
               </div>
 
               <h3 className="font-black text-lg mb-1">{pkg.name}</h3>
               <div className="mb-1">
-                <span className="text-3xl font-black text-[#F97316]">{pkg.price}</span>
+                <span className="text-3xl font-black text-[#14B8A6]">{pkg.price}</span>
                 {pkg.priceNote && (
                   <span className="text-xs text-white/35 ml-2">{pkg.priceNote}</span>
                 )}
@@ -137,7 +137,7 @@ export default function PackagesPage() {
               <ul className="space-y-2 mb-4 flex-1">
                 {pkg.bullets.map((b) => (
                   <li key={b} className="flex gap-2 text-sm text-white/65">
-                    <span className="text-[#F97316] mt-0.5 shrink-0">✓</span>
+                    <span className="text-[#14B8A6] mt-0.5 shrink-0">✓</span>
                     {b}
                   </li>
                 ))}
@@ -157,7 +157,7 @@ export default function PackagesPage() {
                 href={`/checkout/${pkg.slug}`}
                 className={`text-center py-3 rounded-xl text-sm font-bold transition-colors ${
                   pkg.featured
-                    ? 'bg-[#F97316] hover:bg-[#ea6c0a] text-white'
+                    ? 'bg-[#14B8A6] hover:bg-[#0D9488] text-white'
                     : 'border border-white/15 hover:border-white/30 text-white'
                 }`}
               >
@@ -175,9 +175,9 @@ export default function PackagesPage() {
           <p className="text-white/45 text-sm mb-8">Available at checkout or after your project is underway.</p>
           <div className="grid sm:grid-cols-2 gap-3">
             {addons.map((a) => (
-              <div key={a.name} className="flex justify-between items-center bg-[#111] border border-white/8 rounded-xl px-5 py-4">
+              <div key={a.name} className="flex justify-between items-center bg-[#11243D] border border-white/8 rounded-xl px-5 py-4">
                 <span className="text-sm text-white/70">{a.name}</span>
-                <span className="text-sm font-bold text-[#F97316] shrink-0 ml-4">{a.price}</span>
+                <span className="text-sm font-bold text-[#14B8A6] shrink-0 ml-4">{a.price}</span>
               </div>
             ))}
           </div>
@@ -189,7 +189,7 @@ export default function PackagesPage() {
         <h2 className="text-3xl font-black mb-4">Not sure which package fits?</h2>
         <p className="text-white/50 mb-8">Book a free 20-minute call. We will tell you exactly what you need and what you do not.</p>
         <div className="flex flex-wrap gap-3 justify-center">
-          <Link href="/book" className="bg-[#F97316] hover:bg-[#ea6c0a] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors">
+          <Link href="/book" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors">
             Book a Free Call
           </Link>
           <Link href="/start-project" className="border border-white/15 hover:border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl text-[15px] transition-colors">

@@ -59,7 +59,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         className="w-full text-left py-5 flex items-center justify-between gap-4"
       >
         <span className="font-semibold text-[15px]">{q}</span>
-        <span className={`text-[#F97316] text-xl shrink-0 transition-transform ${open ? 'rotate-45' : ''}`}>+</span>
+        <span className={`text-[#14B8A6] text-xl shrink-0 transition-transform ${open ? 'rotate-45' : ''}`}>+</span>
       </button>
       {open && (
         <p className="text-white/50 text-sm leading-relaxed pb-5">{a}</p>
@@ -70,10 +70,10 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQPage() {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
+    <div className="bg-[#0A1A2F] text-white min-h-screen">
       <section className="px-6 py-20 border-b border-white/8">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-4">FAQ</p>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-4">FAQ</p>
           <h1 className="text-4xl font-black mb-4">Straight answers.</h1>
           <p className="text-white/50">The questions we hear most. If yours is not here, book a call.</p>
         </div>
@@ -90,7 +90,7 @@ export default function FAQPage() {
       <section className="px-6 py-20 text-center">
         <h2 className="text-2xl font-black mb-4">Still have questions?</h2>
         <div className="flex flex-wrap gap-3 justify-center">
-          <Link href="/book" className="bg-[#F97316] hover:bg-[#ea6c0a] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
+          <Link href="/book" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors">
             Book a Free Call
           </Link>
           <Link href="/contact" className="border border-white/15 hover:border-white/30 text-white px-6 py-3 rounded-xl text-sm transition-colors">

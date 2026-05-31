@@ -7,10 +7,10 @@ export const metadata: Metadata = {
 
 export default function DisclaimerPage() {
   return (
-    <div className="bg-[#0a0a0a] text-white min-h-screen">
+    <div className="bg-[#0A1A2F] text-white min-h-screen">
       <section className="px-6 py-20">
         <div className="max-w-2xl mx-auto">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F97316] mb-4">Disclaimer</p>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-4">Disclaimer</p>
           <h1 className="text-3xl font-black mb-8">Funding-Readiness Disclaimer</h1>
           <div className="space-y-5 text-white/55 text-sm leading-relaxed">
             <p>3B Media Group provides professional business presence services including domain setup, logo design, website development, and related digital infrastructure. These services are designed to support a professional business image.</p>

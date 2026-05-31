@@ -25,7 +25,7 @@ export default async function LeadsPage() {
         </div>
       </div>
 
-      <div className="bg-[#111] border border-white/8 rounded-2xl overflow-hidden">
+      <div className="bg-[#11243D] border border-white/8 rounded-2xl overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
@@ -46,7 +46,7 @@ export default async function LeadsPage() {
               {leads?.map((lead) => (
                 <tr key={lead.id} className="hover:bg-white/3 transition-colors">
                   <td className="px-5 py-4">
-                    <Link href={`/admin/leads/${lead.id}`} className="font-semibold hover:text-[#F97316] transition-colors">
+                    <Link href={`/admin/leads/${lead.id}`} className="font-semibold hover:text-[#14B8A6] transition-colors">
                       {lead.name}
                     </Link>
                   </td>
