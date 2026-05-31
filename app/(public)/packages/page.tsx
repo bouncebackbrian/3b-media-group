@@ -90,7 +90,7 @@ const addons = [
 
 export default function PackagesPage() {
   return (
-    <div className="bg-[#0A1A2F] text-white min-h-screen">
+    <div className="bg-[#0A1A2F] text-white">
       <section className="px-6 py-20 border-b border-white/8">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-4">Packages & Pricing</p>

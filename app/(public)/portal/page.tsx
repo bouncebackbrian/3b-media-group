@@ -17,7 +17,7 @@ const features = [
 
 export default function PortalPage() {
   return (
-    <div className="bg-[#0A1A2F] text-white min-h-screen">
+    <div className="bg-[#0A1A2F] text-white">
       <section className="px-6 py-24 border-b border-white/8">
         <div className="max-w-3xl mx-auto text-center">
           <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-[#14B8A6] bg-[#14B8A6]/10 border border-[#14B8A6]/30 px-3 py-1 rounded-full mb-6">

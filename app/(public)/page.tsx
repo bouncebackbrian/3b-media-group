@@ -35,7 +35,7 @@ const faqs = [
 
 export default function HomePage() {
   return (
-    <div className="bg-[#0A1A2F] text-white min-h-screen">
+    <div className="bg-[#0A1A2F] text-white">
 
       {/* HERO */}
       <section className="px-6 py-28 md:py-36 border-b border-white/8">

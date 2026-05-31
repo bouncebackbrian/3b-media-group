@@ -36,7 +36,7 @@ const ecosystem = [
 
 export default function BusinessGrowthPage() {
   return (
-    <div className="bg-[#0A1A2F] text-white min-h-screen">
+    <div className="bg-[#0A1A2F] text-white">
       {/* Hero */}
       <section className="px-6 py-20 border-b border-white/8">
         <div className="max-w-4xl mx-auto">
