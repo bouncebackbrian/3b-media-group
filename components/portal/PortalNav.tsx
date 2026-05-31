@@ -52,13 +52,13 @@ export default function PortalNav() {
         })}
       </nav>
 
-      <div className="p-3 border-t border-white/8 space-y-0.5">
-        <Link href="/" className="flex items-center gap-2 px-3 py-2 text-xs text-white/25 hover:text-white/50 transition-colors">
+      <div className="p-3 border-t border-white/8 space-y-1">
+        <Link href="/" className="flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm text-white/55 hover:text-white hover:bg-white/5 transition-colors font-medium">
           ← Back to site
         </Link>
         <button
           onClick={signOut}
-          className="w-full text-left flex items-center gap-2 px-3 py-2 text-xs text-white/25 hover:text-white/50 transition-colors"
+          className="w-full text-left flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm text-red-400/70 hover:text-red-400 hover:bg-red-400/8 transition-colors font-medium"
         >
           Sign out
         </button>
