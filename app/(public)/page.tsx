@@ -35,68 +35,81 @@ const faqs = [
 
 export default function HomePage() {
   return (
-    <div className="bg-[#0A1A2F] text-white">
+    <div className="bg-[#060F1E] text-white">
 
       {/* HERO */}
-      <section className="px-4 sm:px-6 py-20 sm:py-28 md:py-36 border-b border-white/8">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-5">3B Media Group</p>
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black leading-[1.08] mb-6 tracking-tight">
+      <section className="relative px-4 sm:px-6 py-24 sm:py-32 md:py-40 border-b border-white/8 overflow-hidden">
+        {/* Glow orbs */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#14B8A6]/10 rounded-full blur-[120px]" />
+          <div className="absolute top-20 right-1/4 w-[300px] h-[300px] bg-[#0EA5E9]/8 rounded-full blur-[100px]" />
+        </div>
+        <div className="max-w-4xl mx-auto text-center relative">
+          <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 text-xs font-semibold text-[#14B8A6] mb-8 backdrop-blur-sm">
+            <span className="w-1.5 h-1.5 bg-[#14B8A6] rounded-full animate-pulse" />
+            3B Media Group
+          </div>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-[1.05] mb-6 tracking-tight">
             Launch. Grow. Automate.<br />
-            <span className="text-[#14B8A6]">Scale.</span>
+            <span className="bg-gradient-to-r from-[#14B8A6] to-[#0EA5E9] bg-clip-text text-transparent">Scale.</span>
           </h1>
-          <p className="text-base sm:text-lg text-white/55 max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10">
+          <p className="text-base sm:text-lg text-white/55 max-w-2xl mx-auto leading-relaxed mb-10">
             The digital growth agency for entrepreneurs, realtors, and trucking companies. Marketing, websites, AI, branding, and business growth — everything you need to grow, in one place.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/grow" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors text-center">
+            <Link href="/grow" className="bg-gradient-to-r from-[#14B8A6] to-[#0EA5E9] hover:from-[#0D9488] hover:to-[#0284C7] text-white font-bold px-8 py-4 rounded-xl text-[15px] transition-all shadow-xl shadow-[#14B8A6]/25 text-center">
               Get Started →
             </Link>
-            <Link href="/contact" className="border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-semibold px-7 py-3.5 rounded-xl text-[15px] transition-colors text-center">
+            <Link href="/contact" className="bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white/80 hover:text-white font-semibold px-8 py-4 rounded-xl text-[15px] transition-all backdrop-blur-sm text-center">
               Request a Quote
             </Link>
           </div>
         </div>
       </section>
 
-      {/* SERVICES OVERVIEW */}
+      {/* SERVICES */}
       <section className="px-4 sm:px-6 py-16 sm:py-24 border-b border-white/8">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-10 sm:mb-12">
+          <div className="mb-10 sm:mb-14">
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-3">What We Do</p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black">Five divisions. One growth partner.</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((s) => (
-              <Link key={s.href} href={s.href} className="bg-[#11243D] border border-white/8 hover:border-[#14B8A6]/40 rounded-2xl p-6 sm:p-7 group transition-colors">
-                <div className="text-[#14B8A6] text-2xl mb-4 font-mono">{s.icon}</div>
+              <Link key={s.href} href={s.href}
+                className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/8 hover:border-[#14B8A6]/30 rounded-2xl p-6 sm:p-7 transition-all backdrop-blur-sm hover:shadow-lg hover:shadow-[#14B8A6]/5">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#14B8A6]/20 to-[#0EA5E9]/10 rounded-xl flex items-center justify-center mb-5 group-hover:from-[#14B8A6]/30 transition-all">
+                  <span className="text-[#14B8A6] text-lg font-mono">{s.icon}</span>
+                </div>
                 <h3 className="font-bold text-[15px] mb-2 group-hover:text-[#14B8A6] transition-colors">{s.title}</h3>
                 <p className="text-sm text-white/45 leading-relaxed">{s.desc}</p>
               </Link>
             ))}
-            <Link href="/services" className="bg-transparent border border-white/8 hover:border-white/20 rounded-2xl p-6 sm:p-7 flex items-center justify-center group transition-colors">
-              <span className="text-sm text-white/40 group-hover:text-white transition-colors">See all services →</span>
+            <Link href="/services"
+              className="bg-transparent border border-white/8 hover:border-white/15 rounded-2xl p-6 sm:p-7 flex items-center justify-center group transition-all">
+              <span className="text-sm text-white/35 group-hover:text-white/70 transition-colors">See all services →</span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* GROWTH WIZARD BAND */}
-      <section className="px-4 sm:px-6 py-16 sm:py-20 border-b border-white/8 bg-[#081320]">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative px-4 sm:px-6 py-16 sm:py-20 border-b border-white/8 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#14B8A6]/8 via-transparent to-[#0EA5E9]/5 pointer-events-none" />
+        <div className="max-w-4xl mx-auto text-center relative">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-4">Free Tool</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4">Get your 3Boost Growth Score.</h2>
           <p className="text-white/55 leading-relaxed max-w-2xl mx-auto mb-8 text-base sm:text-lg">
-            The Business Growth Wizard is your 24/7 consultant. Answer a few questions, get a 0–100 growth score, and a personalized plan — the exact services that fit your business right now.
+            Answer a few questions, get a 0–100 growth score across six categories, and a personalized plan with the exact services that fit your business right now.
           </p>
-          <Link href="/grow" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors inline-block">
+          <Link href="/grow" className="bg-gradient-to-r from-[#14B8A6] to-[#0EA5E9] hover:from-[#0D9488] hover:to-[#0284C7] text-white font-bold px-8 py-3.5 rounded-xl text-[15px] transition-all shadow-lg shadow-[#14B8A6]/20 inline-block">
             Get My 3Boost Score →
           </Link>
         </div>
       </section>
 
       {/* PRICING */}
-      <section className="px-4 sm:px-6 py-16 sm:py-24 border-b border-white/8">
+      <section className="px-4 sm:px-6 py-16 sm:py-24 border-b border-white/8 bg-[#040C18]">
         <div className="max-w-5xl mx-auto">
           <div className="mb-10 sm:mb-12">
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-3">Pricing</p>
@@ -104,39 +117,51 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {pricing.map((p) => (
-              <div key={p.name} className={`rounded-2xl p-6 sm:p-7 flex flex-col ${p.featured ? 'bg-[#14B8A6]/10 border border-[#14B8A6]/40' : 'bg-[#11243D] border border-white/8'}`}>
+              <div key={p.name} className={`rounded-2xl p-6 sm:p-7 flex flex-col transition-all ${
+                p.featured
+                  ? 'bg-gradient-to-b from-[#14B8A6]/15 to-[#0EA5E9]/8 border border-[#14B8A6]/40 shadow-xl shadow-[#14B8A6]/10'
+                  : 'bg-white/[0.03] border border-white/8 hover:border-white/15 hover:bg-white/[0.05]'
+              }`}>
                 {p.featured && <span className="text-[10px] font-bold tracking-widest uppercase text-[#14B8A6] mb-4">Most Popular</span>}
                 <h3 className="font-black text-lg mb-1">{p.name}</h3>
-                <p className="mb-3"><span className="text-3xl font-black text-[#14B8A6]">{p.price}</span><span className="text-white/40 text-sm">{p.period}</span></p>
+                <p className="mb-3">
+                  <span className={`text-3xl font-black ${p.featured ? 'bg-gradient-to-r from-[#14B8A6] to-[#0EA5E9] bg-clip-text text-transparent' : 'text-[#14B8A6]'}`}>{p.price}</span>
+                  <span className="text-white/40 text-sm">{p.period}</span>
+                </p>
                 <p className="text-sm text-white/50 mb-6 leading-relaxed flex-1">{p.desc}</p>
-                <Link href="/pricing" className={`text-center py-3 rounded-xl text-sm font-bold transition-colors ${p.featured ? 'bg-[#14B8A6] hover:bg-[#0D9488] text-white' : 'border border-white/15 hover:border-white/30 text-white'}`}>
+                <Link href="/pricing" className={`text-center py-3 rounded-xl text-sm font-bold transition-all ${
+                  p.featured
+                    ? 'bg-gradient-to-r from-[#14B8A6] to-[#0EA5E9] text-white shadow-lg shadow-[#14B8A6]/20 hover:shadow-[#14B8A6]/30'
+                    : 'border border-white/10 hover:border-white/25 text-white hover:bg-white/5'
+                }`}>
                   View Plans
                 </Link>
               </div>
             ))}
           </div>
           <div className="text-center mt-8">
-            <Link href="/pricing" className="text-sm text-white/40 hover:text-white transition-colors">See full pricing including websites and one-time services →</Link>
+            <Link href="/pricing" className="text-sm text-white/35 hover:text-[#14B8A6] transition-colors">See full pricing including websites and one-time services →</Link>
           </div>
         </div>
       </section>
 
-      {/* PORTFOLIO HIGHLIGHT */}
-      <section className="px-4 sm:px-6 py-16 sm:py-24 border-b border-white/8 bg-[#081320]">
-        <div className="max-w-4xl mx-auto">
+      {/* PORTFOLIO */}
+      <section className="relative px-4 sm:px-6 py-16 sm:py-24 border-b border-white/8 overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-[400px] h-[300px] bg-[#14B8A6]/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="max-w-4xl mx-auto relative">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-5">Portfolio</p>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-5">Real results for real businesses.</h2>
           <p className="text-white/55 leading-relaxed mb-8 max-w-2xl text-base sm:text-lg">
             From realtors to trucking companies, we build the professional foundation our clients grow on — and keep them visible with consistent marketing.
           </p>
-          <Link href="/portfolio" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-6 py-3 rounded-xl text-sm transition-colors inline-block">
+          <Link href="/portfolio" className="bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all backdrop-blur-sm inline-block">
             See the Portfolio →
           </Link>
         </div>
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="px-4 sm:px-6 py-16 sm:py-24 border-b border-white/8">
+      <section className="px-4 sm:px-6 py-16 sm:py-24 border-b border-white/8 bg-[#040C18]">
         <div className="max-w-5xl mx-auto">
           <div className="mb-10 sm:mb-12 text-center">
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#14B8A6] mb-3">Testimonials</p>
@@ -144,10 +169,18 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-[#11243D] border border-white/8 rounded-2xl p-6 sm:p-8">
-                <p className="text-white/70 leading-relaxed mb-5 text-sm sm:text-base">&ldquo;{t.quote}&rdquo;</p>
-                <p className="text-sm font-bold">{t.name}</p>
-                <p className="text-xs text-white/40">{t.title}</p>
+              <div key={t.name} className="bg-white/[0.03] border border-white/8 rounded-2xl p-6 sm:p-8 backdrop-blur-sm hover:border-white/15 transition-all">
+                <div className="text-[#14B8A6] text-2xl mb-4 opacity-60">&ldquo;</div>
+                <p className="text-white/70 leading-relaxed mb-6 text-sm sm:text-base">{t.quote}</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-[#14B8A6]/30 to-[#0EA5E9]/20 rounded-full flex items-center justify-center text-xs font-bold text-[#14B8A6]">
+                    {t.name[0]}
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold">{t.name}</p>
+                    <p className="text-xs text-white/40">{t.title}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -163,7 +196,7 @@ export default function HomePage() {
           </div>
           <div className="space-y-3">
             {faqs.map((f) => (
-              <details key={f.q} className="bg-[#11243D] border border-white/8 rounded-2xl p-5 sm:p-6 group">
+              <details key={f.q} className="bg-white/[0.03] hover:bg-white/[0.05] border border-white/8 hover:border-white/12 rounded-2xl p-5 sm:p-6 group transition-all">
                 <summary className="font-bold text-sm sm:text-[15px] cursor-pointer list-none flex justify-between items-center gap-4">
                   {f.q}
                   <span className="text-[#14B8A6] group-open:rotate-45 transition-transform text-xl leading-none shrink-0">+</span>
@@ -176,15 +209,18 @@ export default function HomePage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="px-4 sm:px-6 py-20 sm:py-28">
-        <div className="max-w-2xl mx-auto text-center">
+      <section className="relative px-4 sm:px-6 py-20 sm:py-28 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#14B8A6]/8 rounded-full blur-[100px]" />
+        </div>
+        <div className="max-w-2xl mx-auto text-center relative">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-5">Ready to grow your business?</h2>
-          <p className="text-white/50 mb-8 leading-relaxed text-base sm:text-lg">Get a personalized plan in two minutes, or request a quote. Either way, we move fast.</p>
+          <p className="text-white/50 mb-10 leading-relaxed text-base sm:text-lg">Get a personalized plan in two minutes, or request a quote. Either way, we move fast.</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/grow" className="bg-[#14B8A6] hover:bg-[#0D9488] text-white font-bold px-7 py-3.5 rounded-xl text-[15px] transition-colors text-center">
+            <Link href="/grow" className="bg-gradient-to-r from-[#14B8A6] to-[#0EA5E9] hover:from-[#0D9488] hover:to-[#0284C7] text-white font-bold px-8 py-4 rounded-xl text-[15px] transition-all shadow-xl shadow-[#14B8A6]/25 text-center">
               Get Started →
             </Link>
-            <Link href="/contact" className="border border-white/15 hover:border-white/30 text-white/70 hover:text-white font-semibold px-7 py-3.5 rounded-xl text-[15px] transition-colors text-center">
+            <Link href="/contact" className="bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-white/80 hover:text-white font-semibold px-8 py-4 rounded-xl text-[15px] transition-all text-center">
               Request a Quote
             </Link>
           </div>

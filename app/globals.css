@@ -1,14 +1,11 @@
 @import "tailwindcss";
 
-/*
- * 3B Media Group — design system
- * Palette: Navy / Teal / White / Silver.
- */
 :root {
-  --bg-base:       #0A1A2F;
-  --bg-deep:       #081320;
-  --bg-surface:    #11243D;
+  --bg-base:       #060F1E;
+  --bg-deep:       #040C18;
+  --bg-surface:    rgba(255,255,255,0.04);
   --accent:        #14B8A6;
+  --accent-2:      #0EA5E9;
   --accent-hover:  #0D9488;
   --text-primary:  #ffffff;
   --text-muted:    rgba(255, 255, 255, 0.55);
@@ -17,9 +14,8 @@
 }
 
 /*
- * Put the reset inside @layer base so Tailwind utilities
- * (which live in @layer utilities) can override it.
- * Unlayered CSS beats all layers — that was breaking mx-auto.
+ * Reset lives in @layer base so Tailwind utility classes
+ * (in @layer utilities) can override it — critical for mx-auto.
  */
 @layer base {
   *, *::before, *::after {
