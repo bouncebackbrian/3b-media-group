@@ -3,36 +3,41 @@
 /*
  * 3B Media Group — design system
  * Palette: Navy / Teal / White / Silver.
- * Pages use the hex values below directly (e.g. bg-[#0A1A2F]) so these
- * variables document the canonical tokens. Update both if the palette changes.
  */
 :root {
-  --bg-base:       #0A1A2F; /* deep navy — page background */
-  --bg-deep:       #081320; /* darker navy — alternating sections */
-  --bg-surface:    #11243D; /* navy surface — cards, panels */
-  --accent:        #14B8A6; /* teal — primary accent */
-  --accent-hover:  #0D9488; /* teal (darker) — hover */
-  --text-primary:  #ffffff; /* white */
-  --text-muted:    rgba(255, 255, 255, 0.55); /* silver */
+  --bg-base:       #0A1A2F;
+  --bg-deep:       #081320;
+  --bg-surface:    #11243D;
+  --accent:        #14B8A6;
+  --accent-hover:  #0D9488;
+  --text-primary:  #ffffff;
+  --text-muted:    rgba(255, 255, 255, 0.55);
   --text-dim:      rgba(255, 255, 255, 0.28);
   --border:        rgba(255, 255, 255, 0.08);
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/*
+ * Put the reset inside @layer base so Tailwind utilities
+ * (which live in @layer utilities) can override it.
+ * Unlayered CSS beats all layers — that was breaking mx-auto.
+ */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-html, body {
-  background: var(--bg-base);
-  color: var(--text-primary);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+  html, body {
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
 
-section {
-  position: relative;
-  z-index: 1;
+  section {
+    position: relative;
+    z-index: 1;
+  }
 }
