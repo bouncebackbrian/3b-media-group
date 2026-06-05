@@ -22,7 +22,8 @@
     "resend": "^6.12.4",
     "stripe": "^22.2.0",
     "zod": "^4.4.3",
-    "@anthropic-ai/sdk": "^0.54.0"
+    "@anthropic-ai/sdk": "^0.54.0",
+    "@3b/auth": "*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
