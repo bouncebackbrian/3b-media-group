@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-base:       #060F1E;
+  --bg-deep:       #040C18;
+  --bg-surface:    rgba(255,255,255,0.04);
+  --accent:        #14B8A6;
+  --accent-2:      #0EA5E9;
+  --accent-hover:  #0D9488;
+  --text-primary:  #ffffff;
+  --text-muted:    rgba(255, 255, 255, 0.55);
+  --text-dim:      rgba(255, 255, 255, 0.28);
+  --border:        rgba(255, 255, 255, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/*
+ * Reset lives in @layer base so Tailwind utility classes
+ * (in @layer utilities) can override it — critical for mx-auto.
+ */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  html, body {
+    background: var(--bg-base);
+    color: var(--text-primary);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  section {
+    position: relative;
+    z-index: 1;
+  }
 }

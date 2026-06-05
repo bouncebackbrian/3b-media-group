@@ -9,9 +9,21 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
+    "@microsoft/clarity": "^1.0.2",
+    "@supabase/ssr": "^0.10.3",
+    "@supabase/supabase-js": "^2.106.2",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "next": "16.2.6",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-hook-form": "^7.76.1",
+    "resend": "^6.12.4",
+    "stripe": "^22.2.0",
+    "zod": "^4.4.3",
+    "@anthropic-ai/sdk": "^0.54.0",
+    "@3b/auth": "*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
